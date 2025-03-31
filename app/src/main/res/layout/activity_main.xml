@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/calcVisor"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:inputType="none"
+
+        android:layout_marginTop="35dp"
+        android:background="@drawable/calculatorvisor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor" />
+
+
+    <!-- Primeira Fileira -->
+    <LinearLayout
+        android:id="@+id/firstLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/calcVisor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+
+        <Button
+            android:id="@+id/seven"
+            android:tag="7"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_background"
+            android:text="7"
+            android:onClick="numAdd"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/eight"
+            android:tag="8"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_background"
+            android:text="8"
+            android:onClick="numAdd"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/nine"
+            android:tag="9"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_background"
+            android:text="9"
+            android:onClick="numAdd"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/div"
+            android:tag="/"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_background"
+            android:text="/"
+            android:onClick="operatorAdd"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/backspace"
+            android:tag="backspace"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_background"
+            android:onClick="backspace"
+            android:text="&lt;&lt;"/>
+
+
+    </LinearLayout>
+
+
+    <!-- Segunda Fileira -->
+    <LinearLayout
+        android:id="@+id/secondLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/firstLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <Button
+            android:id="@+id/four"
+            android:tag="4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_background"
+            android:text="4"
+            android:onClick="numAdd"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/five"
+            android:tag="5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_background"
+            android:text="5"
+            android:onClick="numAdd"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/six"
+            android:tag="6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_background"
+            android:text="6"
+            android:onClick="numAdd"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/mult"
+            android:tag="x"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_background"
+            android:onClick="operatorAdd"
+            android:text="x"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/clear"
+            android:tag="clear"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_background"
+            android:onClick="clear"
+            android:text="C"/>
+
+
+    </LinearLayout>
+
+    <!-- Terceira Fileira -->
+    <LinearLayout
+        android:id="@+id/thirdLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/secondLayout"
+        app:layout_constraintStart_toStartOf="@id/secondLayout">
+
+
+        <Button
+            android:id="@+id/one"
+            android:tag="1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_background"
+            android:text="1"
+            android:onClick="numAdd"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/two"
+            android:tag="2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_background"
+            android:text="2"
+            android:onClick="numAdd"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/three"
+            android:tag="3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_background"
+            android:text="3"
+            android:onClick="numAdd"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/minus"
+            android:tag="-"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_background"
+            android:onClick="operatorAdd"
+            android:text="-"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/equals"
+        android:tag="="
+        android:layout_width="50dp"
+        android:layout_height="108dp"
+        android:background="@drawable/button_background"
+        android:layout_marginTop="8dp"
+        android:onClick="calculateString"
+        android:text="="
+
+        app:layout_constraintStart_toEndOf="@id/thirdLayout"
+        app:layout_constraintTop_toBottomOf="@id/secondLayout"/>
+
+    <!-- Quarta Fileira -->
+    <LinearLayout
+        android:id="@+id/fourthLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/thirdLayout"
+        app:layout_constraintStart_toStartOf="@id/thirdLayout">
+
+
+        <Button
+            android:id="@+id/zero"
+            android:tag="0"
+            android:layout_width="108dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_background"
+            android:text="0"
+            android:onClick="numAdd"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/dot"
+            android:tag="."
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_background"
+            android:onClick="dotAdd"
+            android:text="."/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/plus"
+            android:tag="+"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_background"
+            android:onClick="operatorAdd"
+            android:text="+"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
